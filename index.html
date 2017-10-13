@@ -20,10 +20,10 @@
           </div>
           <div class="right-nav-links">
             <ul>
-              <li><a href="#about">About</a></li>
-              <li><a href="#skills">Skills</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="#">Contact</a></li>
+              <a href="#about" class="slidelinks"><li>About</li></a>
+              <a href="#skills" class="slidelinks"><li>Skills</li></a>
+              <a href="#projects" class="slidelinks"><li>Projects</li></a>
+              <a href="#" class="slidelinks"><li>Contact</li></a>
             </ul>
           </div>
         </div>
@@ -37,10 +37,10 @@
               <i class="fa fa-times" id="close-modal"></i>
             </button>
             <ul>
-              <li><a href="#about">About</a></li>
-              <li><a href="#skills">Skills</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="#">Contact</a></li>
+              <a href="#about" class="slidelinks"><li>About</li></a>
+              <a href="#skills" class="slidelinks"><li>Skills</li></a>
+              <a href="#projects" class="slidelinks"><li>Projects</li></a>
+              <a href="#" class="slidelinks"><li>Contact</li></a>
             </ul>
           </div>
         </div>
@@ -143,9 +143,7 @@
       </div>
     </div>
     <!-- <script type="text/javascript" src="./js/jquery.js"></script> -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
-      crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.0.js">
     </script>
     <script type="text/javascript">
       $(document).ready(function() {
@@ -159,6 +157,12 @@
           $('#close-modal').removeClass('show');
           $('#open-modal').removeClass('hide');
         });
+        $('.right-nav-links li').click(function(event) {
+          $('.fixnav-container ul').removeClass('active');
+          $('#close-modal').removeClass('show');
+          $('#open-modal').removeClass('hide');
+        });
+
         $(window).scroll(function(){
           if ($(window).width()>766)
           {
@@ -168,6 +172,14 @@
               $('.fixnav-container').removeClass('active');
             }
           }
+        });
+        $('.slidelinks').click(function(e) {
+          var linkhref=$(this).attr('href');
+
+          $('html,body').animate({
+            scrollTop: $(linkhref).offset().top
+          },1000);
+          e.preventDefault();
         });
       });
     </script>
