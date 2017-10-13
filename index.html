@@ -15,7 +15,7 @@
     <div class="main-container">
       <div class="navigation" id="about">
         <div class="nav-container">
-          <div class="left-logo">
+          <div class="left-logo" id="notfixed-logo">
             <embed src="./svg/logo.svg" id="logo">
           </div>
           <div class="right-nav-links">
@@ -32,6 +32,7 @@
             <embed src="./svg/logo.svg" id="logofixed">
           </div>
           <div class="right-nav-links">
+            <button type="button"> <i class="fa fa-bars" class="toggle-burger"></i></button>
             <ul>
               <li><a href="#about">About</a></li>
               <li><a href="#skills">Skills</a></li>
@@ -51,7 +52,7 @@
               <p>There's beauty<br>in simplicity</p>
             </div>
             <div class="small-text">
-              <p><i class="fa fa-quote-left"></i> Hello there, I'm<span class="myname"> Ralp Dexter Bongato</span> <br> a student and a passionate fullstack web<br>developer from Philippines, yes sometimes<br> I do bad things but i do them well. <i class="fa fa-quote-right"></i></p>
+              <p><i class="fa fa-quote-left"></i> Hello there, I'm<span class="myname"> Ralp Dexter Bongato</span>  a student and a passionate fullstack webdeveloper from Philippines, yes sometimes I do bad things but i do them well. <i class="fa fa-quote-right"></i></p>
             </div>
             <div class="more-btn-container">
               <button type="button" name="button">Read more</button>
@@ -123,9 +124,7 @@
       </section>
       <div class="footer-container">
         <div class="footer-left">
-          <div class="footer-center">
-            <p>“It’s through mistakes that you actually can grow. You have to get bad in order to get good.”<br><br>– Paula Scher</p>
-          </div>
+          <p>“It’s through mistakes that you actually can grow. You have to get bad in order to get good.”<br><br>– Paula Scher</p>
         </div>
         <div class="footer-center">
           <h2><embed src="./svg/logo.svg"></h2>
@@ -133,9 +132,9 @@
         <div class="footer-right">
           <p>Copyright <i class="fa fa-copyright"></i> 2017 R.D.B.</p>
           <ul>
-            <a href="#"><li><i class="fa fa-facebook"></i></li></a>
-            <a href="#"><li><i class="fa fa-linkedin"></i></li></a>
-            <a href="#"><li><i class="fa fa-github"></i></li></a>
+            <a href="https://www.facebook.com/rdb2898" target="_blank"><li><i class="fa fa-facebook"></i></li></a>
+            <a href="https://www.linkedin.com/in/ralp-dexter-bongato-671257151/" target="_blank"><li><i class="fa fa-linkedin"></i></li></a>
+            <a href="https://github.com/ralpdexterbongato" target="_blank"><li><i class="fa fa-github"></i></li></a>
           </ul>
         </div>
       </div>
@@ -146,13 +145,20 @@
       crossorigin="anonymous">
     </script>
     <script type="text/javascript">
-      $(window).scroll(function(){
-        if ($(window).scrollTop() >=100) {
-           $('.fixnav-container').addClass('active animated fadeInDown');
-        }
-        else {
-           $('.fixnav-container').removeClass('active');
-        }
+      $(document).ready(function() {
+        $('.toggle-burger').click(function(event) {
+          $('fixnav-container ul').addClass('active');
+        });
+        $(window).scroll(function(){
+          if ($(window).width()>766)
+          {
+            if ($(window).scrollTop() >=100) {
+              $('.fixnav-container').addClass('active animated fadeInDown');
+            }else{
+              $('.fixnav-container').removeClass('active');
+            }
+          }
+        });
       });
     </script>
   </body>
