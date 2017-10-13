@@ -32,7 +32,10 @@
             <embed src="./svg/logo.svg" id="logofixed">
           </div>
           <div class="right-nav-links">
-            <button type="button"> <i class="fa fa-bars" class="toggle-burger"></i></button>
+            <button type="button">
+              <i class="fa fa-bars" id="open-modal"></i>
+              <i class="fa fa-times" id="close-modal"></i>
+            </button>
             <ul>
               <li><a href="#about">About</a></li>
               <li><a href="#skills">Skills</a></li>
@@ -146,9 +149,16 @@
     </script>
     <script type="text/javascript">
       $(document).ready(function() {
-        // $('.toggle-burger').click(function(event) {
-        //   $('fixnav-container ul').addClass('active');
-        // });
+        $('#open-modal').click(function(event) {
+          $('.fixnav-container ul').addClass('active');
+          $('#open-modal').addClass('hide');
+          $('#close-modal').addClass('show');
+        });
+        $('#close-modal').click(function(event) {
+          $('.fixnav-container ul').removeClass('active');
+          $('#close-modal').removeClass('show');
+          $('#open-modal').removeClass('hide');
+        });
         $(window).scroll(function(){
           if ($(window).width()>766)
           {
