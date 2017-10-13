@@ -72,25 +72,25 @@ body
 }
 .fixnav-container
 {
+  -webkit-backface-visibility: hidden;
 	position: fixed;
 	background: #2B3137;
 	display: none;
-	top: -5000px;
 	transition:top 1s;
 	left:0;
 	right:0;
-	display:flex;
+	top: 0;
 	padding:5px 50px 0px 50px;
 	height: 50px;
-	-ms-filter: drop-shadow(0 4px 3px #1C2024);
--webkit-filter: drop-shadow(0 4px 3px #1C2024);
--moz-filter: drop-shadow(0 4px 3px #1C2024);
--o-filter: drop-shadow(0 4px 3px #1C2024);
-filter: drop-shadow(0 4px 3px #1C2024);
+	-ms-filter: drop-shadow(0 4px 3px rgba(28, 32, 36, 0.5));
+-webkit-filter: drop-shadow(0 4px 3px rgba(28, 32, 36, 0.5));
+-moz-filter: drop-shadow(0 4px 3px rgba(28, 32, 36, 0.5));
+-o-filter: drop-shadow(0 4px 3px rgba(28, 32, 36, 0.5));
+filter: drop-shadow(0 4px 3px rgba(28, 32, 36, 0.5));
 }
 .fixnav-container.active
 {
-	top:0;
+	display:flex;
 }
 .left-logo
 {
