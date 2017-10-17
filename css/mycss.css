@@ -167,12 +167,12 @@ section
 	flex:3;
 	display: flex;
 	flex-direction: column;
+	color: #c9c9c9;
 }
 .big-text
 {
 	font-size:81px;
 	display: flex;
-	color: #BEBEBE;
 	line-height:80px;
 	font-weight: 100;
 	font-family: 'Raleway',sans-serif;
@@ -181,7 +181,6 @@ section
 {
 	font-weight: 200;
 	margin-top: 100px;
-	color: #BEBEBE;
 	border-left: 1px solid #6E6E6E;
 	padding-left:25px;
 	line-height: 23px;
@@ -200,7 +199,7 @@ section
 	padding:10px 15px;
 	font-size: 15px;
 	font-family:inherit;
-	color: #e5e5e5;
+	color: #a1a1a1;
 }
 .more-btn-container button:after
 {
