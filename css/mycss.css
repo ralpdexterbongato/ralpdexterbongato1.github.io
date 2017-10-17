@@ -150,6 +150,20 @@ section
 	font-family:inherit;
 	letter-spacing: 1px;
 }
+/*frontpage*/
+.front-page-container
+{
+	height:70vh;
+	margin-bottom: 100px;
+	background: -moz-linear-gradient(127deg, #58BDC4 0, #D54DFF 100%);/* FF3.6+ */
+	background: -webkit-gradient(linear, 127deg, color-stop(0, 58BDC4), color-stop(100%, D54DFF));/* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(127deg, #58BDC4 0, #D54DFF 100%);/* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(127deg, #58BDC4 0, #D54DFF 100%);/* Opera 11.10+ */
+	background: -ms-linear-gradient(127deg, #58BDC4 0, #D54DFF 100%);/* IE10+ */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1301FE', endColorstr='#F4F60C', GradientType='1'); /* for IE */
+	background: linear-gradient(127deg, #58BDC4 0, #D54DFF 100%);/* W3C */
+}
+/*about*/
 .landing-hero
 {
 	display: flex;
@@ -218,10 +232,11 @@ section
 .hero-right-image
 {
 	flex:3;
+	display: flex;
 }
-.hero-right-image embed
+.hero-right-image img
 {
-	width: 100%;
+	margin:auto;
 }
 .titleheaders
 {
@@ -239,28 +254,20 @@ section
 /*skills*/
 .skills-container
 {
-	background: #f1f1f1;
 	display: flex;
 	justify-content: space-around;
 	padding:20px;
 	flex-wrap: wrap;
-	background: -moz-linear-gradient(127deg, #58BDC4 0, #D54DFF 100%);/* FF3.6+ */
-	background: -webkit-gradient(linear, 127deg, color-stop(0, 58BDC4), color-stop(100%, D54DFF));/* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(127deg, #58BDC4 0, #D54DFF 100%);/* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(127deg, #58BDC4 0, #D54DFF 100%);/* Opera 11.10+ */
-	background: -ms-linear-gradient(127deg, #58BDC4 0, #D54DFF 100%);/* IE10+ */
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1301FE', endColorstr='#F4F60C', GradientType='1'); /* for IE */
-	background: linear-gradient(127deg, #58BDC4 0, #D54DFF 100%);/* W3C */
 }
 .skill-column
 {
-	width:340px;
-	margin-left: 5px;
-	margin-right: 5px;
+	width:370px;
+	min-height: 300px;
 	color: #f2f2f2;
 	text-align: center;
 	transition: color .5s;
-	margin-bottom: 50px;
+	margin-bottom: 20px;
+	padding:10px;
 }
 .skill-column h1
 {
